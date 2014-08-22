@@ -1,0 +1,11 @@
+{
+    "framework": "mocha",
+    "src_files": [
+        "app/*.js"
+    ],
+    "serve_files": [
+        "test/tests.bundle.js"
+    ],
+    "before_tests": "./node_modules/.bin/browserify test/tests.js -o test/tests.bundle.js -d",
+    "launch_in_dev": ["PhantomJS", "Chrome"]
+}

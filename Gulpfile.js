@@ -16,25 +16,13 @@ gulp.task('lint', function() {
 
 
 gulp.task('tests', function() {
-    var mocha = require('gulp-mocha'),
-        gutil = require('gulp-util');
-    return gulp.src(config.scripts.tests, {read: false})
-               .pipe(mocha({
-                   reporter: 'spec',
-                   globals: {
-                       should: require('should')
-                   }
-               }))
-               .on('error', function(err) {
-                   console.log(err.toString());
-                   this.emit('end');
-               });
+    var exec = require('child_process').exec;
+    exec('./node_modules/.bin/testem');
 });
 
 
 gulp.task('watch', ['default'], function() {
     gulp.watch(config.scripts.src, ['lint']);
-    gulp.watch(config.scripts.tests, ['tests']);
 });
 
 

@@ -14,12 +14,14 @@
     "backbone-events-standalone": "^0.2.2"
   },
   "devDependencies": {
+    "browserify": "^5.10.1",
     "gulp": "^3.8.7",
     "gulp-jshint": "^1.8.4",
     "gulp-mocha": "^1.0.0",
     "gulp-util": "^3.0.0",
     "jshint-stylish": "^0.4.0",
     "mocha": "^1.21.4",
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "testem": "^0.6.18"
   }
 }
