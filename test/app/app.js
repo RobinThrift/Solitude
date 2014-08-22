@@ -1,4 +1,4 @@
-var App    = require('../../app/app'),
+var App    = require('../../lib/app'),
     should = require('should');
 
 
