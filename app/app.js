@@ -35,7 +35,7 @@ App.prototype._registerModules = function(cb) {
         that.pluginAttrs = mod.register.attributes;
         mod.register(that, that.opts, done);
     }, function(notAborted) {
-        if (!notAborted) { throw new Error('Moudle registration aborted early'); }
+        if (!notAborted) { throw new Error('Module registration aborted early'); }
         cb();
     });
 };
