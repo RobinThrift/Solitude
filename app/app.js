@@ -11,7 +11,7 @@ AppDefaults = {
 App = function(opts) {
     this.opts = defaults(opts || {}, AppDefaults);
     this.methods = {};
-    this.exposedObjs = {};
+    this.modules = {};
 };
 
 App.extend = extend;
@@ -50,7 +50,7 @@ App.prototype.method = function(name) {
 };
 
 App.prototype.expose = function(obj) {
-    this.exposedObjs[this.pluginAttrs.name] = obj;
+    this.modules[this.pluginAttrs.name] = obj;
 };
 
 module.exports = App;
