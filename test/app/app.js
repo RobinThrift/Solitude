@@ -1,6 +1,5 @@
 var App    = require('../../app/app'),
     should = require('should');
-require('mocha');
 
 
 describe('Basic Class', function() {
@@ -21,9 +20,11 @@ describe('Basic Class', function() {
 });
 
 describe('Events', function() {
-    
+   
+    var app;
+
     it('before:start', function(done) {
-        var app = new App();
+        app = new App();
 
         app.on('before:start', function() {
             done();
@@ -31,11 +32,10 @@ describe('Events', function() {
         app.run();
     });
 
-    it('register:module', function(done) {
-        var app = new App();
-        app.on('register:module', function(App, opts) {
-            app.should.equal(App);
-            should(opts).equal(app.opts);
+    it('after:start', function(done) {
+        app = new App();
+
+        app.on('after:start', function() {
             done();
         });
         app.run();
