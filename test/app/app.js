@@ -54,4 +54,17 @@ describe('Modules', function() {
         app.run();
     });
 
+    it('registering a method', function(done) {
+
+        var app = new App({
+            modules: [
+                require('./mocks/method-module')
+            ] 
+        });
+
+        app.run();
+
+        app.method('test', done);
+    });
+
 });
