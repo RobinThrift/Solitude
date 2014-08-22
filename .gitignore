@@ -1,0 +1,10 @@
+# EDITOR STUFF
+*.session
+
+# BUILD
+build/
+tmp/
+bin/
+
+# NPM
+node_modules/
