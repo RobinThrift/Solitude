@@ -41,3 +41,17 @@ describe('Events', function() {
         app.run();
     });
 });
+
+describe('Modules', function() {
+
+    it('registration', function() {
+        var app = new App({
+            modules: [
+                require('../../lib/region')
+            ] 
+        });
+
+        app.run();
+    });
+
+});
