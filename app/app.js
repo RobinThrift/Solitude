@@ -1,11 +1,16 @@
 var events = require('backbone-events-standalone'),
     extend = require('ampersand-class-extend'),
     App;
+    defaults  = require('lodash.defaults'),
+    App, AppDefaults;
+AppDefaults = {
+    modules: []
+};
 
 App = function(opts) {
-    this.opts = opts;
     this.commands = {};
     this.handlers = {};
+    this.opts = defaults(opts || {}, AppDefaults);
 };
 
 App.extend = extend;
