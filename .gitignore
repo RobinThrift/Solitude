@@ -6,5 +6,8 @@ build/
 tmp/
 bin/
 
+# Testing
+test/tests.bundle.js
+
 # NPM
 node_modules/
