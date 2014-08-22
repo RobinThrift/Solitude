@@ -30,7 +30,7 @@ App.prototype.run = function() {
 
 App.prototype._registerModules = function(cb) {
     var that = this;
-    eachAsync(this.opts.modules, function(mod, index) {
+    eachAsync(this.opts.modules, function(mod) {
         var done = this.async();
         that.pluginAttrs = mod.register.attributes;
         mod.register(that, that.opts, done);
