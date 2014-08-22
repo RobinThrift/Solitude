@@ -47,7 +47,7 @@ describe('Modules', function() {
     it('registration', function() {
         var app = new App({
             modules: [
-                require('../../lib/region')
+                require('./mocks/module')
             ] 
         });
 
