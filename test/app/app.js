@@ -67,4 +67,17 @@ describe('Modules', function() {
         app.method('test', done);
     });
 
+    it('exposing an object', function(done) {
+
+        var app = new App({
+            modules: [
+                require('./mocks/exposing-module')
+            ] 
+        });
+
+        app.run();
+       
+        app.modules['expose-mock'].test(done);
+    });
+
 });
